@@ -22,7 +22,7 @@ export default function ExamList() {
   const handleStatusUpdate = async (id, newStatus) => {
     try {
       await updateExamStatus(id, newStatus);
-  
+      console.log('HITTTTTTTT');
       setExamSessions((prevSessions) =>
         prevSessions.map((session) =>
           session.id === id

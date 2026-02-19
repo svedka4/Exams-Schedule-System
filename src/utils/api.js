@@ -1,11 +1,12 @@
 // Implemented getters as the first step of implementation.
 // Included error handling in case api call fails. 
-// 
+
 import axios from "axios";
 
 const api = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
+
 
 export const getExams = async () => {
   try {
@@ -68,12 +69,12 @@ export const getLocationById = async (id) => {
   }
 };
 
-export const updateExamStatus = async (id, status) => {
+export const updateExamStatus = async (examId, newStatus) => {
   try {
-    const response = await api.patch(`/api/exams/${id}/status`, { status });
+    const response = await api.patch(`/api/exams/${examId}/status`, { status: newStatus });
     return response.data;
   } catch (error) {
-    console.error(`Error updating exam-${id} status`, error);
+    console.error(`Error updating exam-${examId} status`, error);
     throw error;
   }
 };
