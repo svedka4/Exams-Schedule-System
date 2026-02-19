@@ -64,7 +64,7 @@ export default function FilterModal(props) {
           <div className="FilterField">
             <label htmlFor="datetime">Date</label>
             <input
-              type="datetime"
+              type="date"
               name="datetime"
               id="datetime-field"
               value={filterDate}

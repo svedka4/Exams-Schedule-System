@@ -87,7 +87,7 @@ a:focus {
     font-family: Neuzeit, sans-serif;
     font-weight: 600;
     color: #D9D9D9;
-
+    border-radius: 8px;
     padding: 12px 24px;
 
     transition: all 0.3s ease;
@@ -148,6 +148,9 @@ a:focus {
 }
 
 .ExamCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     color: #D9D9D9; 
     background-color: #0D0D0D;
@@ -192,12 +195,11 @@ a:focus {
     color: #8C8C8C;
 }
 
-.Status {
+.StatusDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-weight: bold;
-    padding: 5px 0px;
-    border-radius: 8px;
-    display: inline-block;
-    text-align: center;
     font-size: 0.9rem;
 }
 
@@ -212,6 +214,23 @@ a:focus {
 
 .Status.Started {
     color: #dc3545;
+}
+
+.UpdateStatusButton {
+    text-decoration: none;
+    font-family: Neuzeit, sans-serif;
+    font-weight: 600;
+    color: #D9D9D9;
+    background-color: #0D0D0D;
+    padding: 10px 20px;
+
+
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px #262626;
 }
 
 .FilterContainer {

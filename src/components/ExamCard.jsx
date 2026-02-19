@@ -1,6 +1,5 @@
-import { getExams } from "../utils/api";
 
-export default function ExamCard({session}) {
+export default function ExamCard({session, onStatusUpdate}) {
   
   const datetime = session.datetime ? session.datetime.split(" ") : ["N/A", "N/A"];
   const examTitle = session.title || "N/A";
@@ -10,6 +9,12 @@ export default function ExamCard({session}) {
   const examStatus = session.status || "N/A";
 
   const statusClass = `Status ${examStatus}`;
+
+  const getNextStatus = (currentStatus) => {
+    if (currentStatus === "Pending") return "Started";
+    if (currentStatus === "Started") return "Finished";
+    return "Finished";
+  };
 
   //TODO: update display of schedule details
   return (
@@ -29,6 +34,9 @@ export default function ExamCard({session}) {
 
       <div className="StatusDetails">
         <p className={statusClass}>{examStatus}</p>
+        <button className="UpdateStatusButton" onClick={() => onStatusUpdate(session.id, getNextStatus(session.status))}>
+          Update Status
+        </button>
       </div>
     </section>
   );

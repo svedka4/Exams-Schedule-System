@@ -24,11 +24,11 @@ then use the npm start command to view a local development version of the projec
 - DONE **Update ExamCard**: Pass the fetched data to the `ExamCard` component to display the relevant details for each exam.
 
 ### 3. Implement Filtering and Sorting
-- **Filter Modal**: Update the `FilterModal` component to allow filtering by date, candidate, and location. Use the `setFiltersObject` state to apply filters to the exam list.
-- **Sorting**: Add sorting functionality to the `ExamList` component to sort exams by date, candidate, or location.
+- DONE **Filter Modal**: Update the `FilterModal` component to allow filtering by date, candidate, and location. Use the `setFiltersObject` state to apply filters to the exam list.
+- **Sorting**: Add UI sorting functionality to the `ExamList` component to sort exams by date, candidate, or location.
 
 ### 4. Update Exam Status
-- **Add Status Update Button**: Add a button to the `ExamCard` component to allow users to update the status of an exam.
+- DONE **Add Status Update Button**: Add a button to the `ExamCard` component to allow users to update the status of an exam.
 - **Handle Status Update**: Use the `updateExamStatus(id, status)` method from the API utility to update the status of an exam. Ensure the UI reflects the updated status.
 
 ### 5. Optional Features
