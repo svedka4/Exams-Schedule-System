@@ -50,7 +50,7 @@ export default function ExamList() {
 
   return (
     <main className="ExamList">
-      <div>
+      <div className="SessionsFilter">
         <h2>Upcoming Sessions</h2>
         <FilterModal
           hide={hideFilterModal}

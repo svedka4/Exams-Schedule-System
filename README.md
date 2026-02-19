@@ -9,7 +9,7 @@ then use the npm start command to view a local development version of the projec
 ## Implementation Steps
 
 ### 1. Refactor and Setup
-- **Refactor `ExamCard` Component**: Update the `ExamCard` component to display the correct schedule details (e.g., title, description, candidate name, date, time, location, and status). Use the API data structure for consistency.
+- DONE **Refactor `ExamCard` Component**: Update the `ExamCard` component to display the correct schedule details (e.g., title, candidate names, date, time, location, and status). Use the API data structure for consistency.
 - DONE **Update API Utility**: Extend the api.js utility in `src/utils` to include methods for all API endpoints:
   - `getExams()`
   - `getExamById(id)`
@@ -20,8 +20,8 @@ then use the npm start command to view a local development version of the projec
   - `updateExamStatus(id, status)`
 
 ### 2. Fetch and Display Exam Schedules
-- **Fetch Exam Data**: Use the `getExams()` method in the `ExamList` component to fetch and display the list of exam schedules.
-- **Update ExamCard**: Pass the fetched data to the `ExamCard` component to display the relevant details for each exam.
+- DONE **Fetch Exam Data**: Use the `getExams()` method in the `ExamList` component to fetch and display the list of exam schedules.
+- DONE **Update ExamCard**: Pass the fetched data to the `ExamCard` component to display the relevant details for each exam.
 
 ### 3. Implement Filtering and Sorting
 - **Filter Modal**: Update the `FilterModal` component to allow filtering by date, candidate, and location. Use the `setFiltersObject` state to apply filters to the exam list.
