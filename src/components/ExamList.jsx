@@ -21,21 +21,13 @@ export default function ExamList() {
 
   const handleStatusUpdate = async (id, newStatus) => {
     try {
-      await updateExamStatus(id, newStatus);
-      console.log('HITTTTTTTT');
+      const normalisedStatus = newStatus.toLowerCase();
+      
+      await updateExamStatus(id, normalisedStatus);
+
       setExamSessions((prevSessions) =>
         prevSessions.map((session) =>
-          session.id === id
-            ? { ...session, status: newStatus }
-            : session
-        )
-      );
-
-      setOriginalExamSessions((prevSessions) =>
-        prevSessions.map((session) =>
-          session.id === id
-            ? { ...session, status: newStatus }
-            : session
+          session.id === id ? { ...session, status: newStatus } : session
         )
       );
   
@@ -57,7 +49,7 @@ export default function ExamList() {
     if (filtersObject.date !== "") {
       setExamSessions((currentSessions) => {
         return currentSessions.filter((session) =>
-          session.datetime.slice(0, 10) === filtersObject.date ? session : null
+          session.datetime.startsWith(filtersObject.date) ? session : null
         );
       });
     }
@@ -81,7 +73,7 @@ export default function ExamList() {
         );
       });
     }
-  }, [filtersObject]);
+  }, [filtersObject, originalExamSessions]);
 
   return (
     <main className="ExamList">
