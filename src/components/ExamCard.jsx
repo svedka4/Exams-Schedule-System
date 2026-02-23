@@ -12,9 +12,9 @@ export default function ExamCard({session, onStatusUpdate}) {
   const formatStatus = (status) => status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
 
   const getNextStatus = (currentStatus) => {
-    if (currentStatus === "Pending") return "Started";
-    if (currentStatus === "Started") return "Finished";
-    return "Finished";
+    if (currentStatus.toLowerCase() === "pending") return "started";
+    if (currentStatus.toLowerCase() === "started") return "finished";
+    return "finished";
   };
 
   //TODO: update display of schedule details
