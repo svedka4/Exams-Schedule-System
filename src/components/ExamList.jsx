@@ -23,7 +23,7 @@ export default function ExamList() {
 
       setExamSessions((prevSessions) =>
         prevSessions.map((session) =>
-          session.id === id ? { ...session, status: newStatus } : session
+          session.id === id ? { ...session, status: normalisedStatus } : session
         )
       );
   
@@ -104,7 +104,7 @@ export default function ExamList() {
           </button>
           <button
             className="FilterButton"
-            onClick={() => setFiltersObject({ date: "", candidate: "", location: "" })}
+            onClick={() => setFiltersObject({ date: "", name: "", location: "" })}
           >
             ↻ Reset Filters
           </button>
@@ -130,7 +130,7 @@ export default function ExamList() {
               className="SortDropdown"
             >
               <option value="date">Date</option>
-              <option value="candidate">Candidate Name</option>
+              <option value="name">Candidate Name</option>
               <option value="location">Location</option>
             </select>
           </div>
