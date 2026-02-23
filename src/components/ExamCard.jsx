@@ -8,7 +8,8 @@ export default function ExamCard({session, onStatusUpdate}) {
   const location = session.location.country || "N/A";
   const examStatus = session.status || "N/A";
 
-  const statusClass = `Status ${examStatus}`;
+  const statusClass = `Status ${examStatus.toLowerCase()}`;
+  const formatStatus = (status) => status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
 
   const getNextStatus = (currentStatus) => {
     if (currentStatus === "Pending") return "Started";
@@ -33,7 +34,7 @@ export default function ExamCard({session, onStatusUpdate}) {
       </div>
 
       <div className="StatusDetails">
-        <p className={statusClass}>{examStatus}</p>
+        <p className={statusClass}>{formatStatus(examStatus)}</p>
         <button className="UpdateStatusButton" onClick={() => onStatusUpdate(session.id, getNextStatus(session.status))}>
           Update Status
         </button>

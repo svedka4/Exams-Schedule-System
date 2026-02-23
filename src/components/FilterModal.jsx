@@ -54,12 +54,13 @@ export default function FilterModal(props) {
 
   return (
     <div className="FilterModal">
-      <div className="ModalContent">
-        <div className="ModalHeader">
+      <div className="ModalHeader">
           <h4 className="ModalTitle">
             Filter Exam Sessions
           </h4>
         </div>
+      <div className="ModalContent">
+        
         <div className="ModalBody">
           <div className="FilterField">
             <label htmlFor="datetime">Date</label>
@@ -89,7 +90,10 @@ export default function FilterModal(props) {
               onInput={(event) => setFilterLocation(event.target.value)}
             />
           </div>
-          <div className="ButtonField">
+      </div>
+        </div>
+        <div className="ModalFooter">
+        <div className="ButtonField">
             <button
               className="FilterButton"
               id="AddFilterButton"
@@ -100,15 +104,12 @@ export default function FilterModal(props) {
               + Add Filters
             </button>
           </div>
-        </div>
-        <div className="ModalFooter">
-          <button
+        <button
             className="Button"
             onClick={() => handleClose() }
           >
             Close
           </button>
-        </div>
       </div>
     </div>
   );
