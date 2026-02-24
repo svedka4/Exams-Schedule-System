@@ -11,7 +11,7 @@ const api = axios.create({
 export const getExams = async () => {
   try {
     const response = await api.get("/api/exams");
-    console.log("Exams fetched successfully:", response.data);
+    // console.log("Exams fetched successfully:", response.data);
     return response.data;
   } catch (error) {
     console.error("Error fetching exams:", error);

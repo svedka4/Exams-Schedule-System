@@ -41,7 +41,7 @@ export default function ExamList() {
   }, []);
 
   useEffect(() => {
-    console.log("useEffect triggered with sortCriteria:", sortCriteria); // Debugging
+    // console.log("useEffect triggered with sortCriteria:", sortCriteria); // Debugging
     let filteredSessions = [...originalExamSessions];
 
     if (filtersObject.date) {
@@ -78,14 +78,14 @@ export default function ExamList() {
       } else if (sortCriteria === "location") {
         const locationA = a.location.country.toLowerCase() || "";
         const locationB = b.location.country.toLowerCase() || "";
-        console.log("Comparing locations:", locationA, locationB); // Debugging
+        // console.log("Comparing locations:", locationA, locationB); // Debugging
         return locationA.localeCompare(locationB);
       }
       return 0;
     });
 
     setExamSessions(filteredSessions);
-    console.log("Updated examSessions:", filteredSessions); // Debugging
+    // console.log("Updated examSessions:", filteredSessions); // Debugging
 
   }, [filtersObject, originalExamSessions, sortCriteria]);
 
@@ -124,7 +124,7 @@ export default function ExamList() {
               id="sort"
               value={sortCriteria}
               onChange={(e) => {
-                console.log("Selected sort criteria:", e.target.value); // Debugging
+                // console.log("Selected sort criteria:", e.target.value); // Debugging
                 setSortCriteria(e.target.value)
               }}
               className="SortDropdown"
