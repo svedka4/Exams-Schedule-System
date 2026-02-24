@@ -410,7 +410,7 @@ a:focus {
         flex-wrap: nowrap;
         flex-direction: row-reverse;
     }
-    
+
     .FilterModal {
         width: 50%;
         align-items: flex-end;
@@ -460,4 +460,121 @@ a:focus {
 .Footer p span {
     font-family: EloquiaLight, sans-serif;
     border-bottom: 1px solid #D9D9D9;
+}
+
+
+/* HOME STYLING */
+.Home {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Neuzeit, sans-serif;
+    color: #D9D9D9;
+    text-align: left;
+}
+
+.Home h2 {
+    font-family: EloquiaBold, sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #D9D9D9;
+    text-align: left;
+}
+
+.Home h3 {
+    font-family: EloquiaBold, sans-serif;
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 8px;
+    color: #D9D9D9;
+    text-align: left;
+}
+
+.Home h4 {
+    font-size: 1rem;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #D9D9D9;
+    text-align: left;
+}
+
+.Home .IntroductionText {
+    margin-bottom: 32px;
+    color: #8C8C8C;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.Home section {
+    margin-bottom: 40px;
+}
+
+.Home p {
+    color: #8C8C8C;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+.Home ul,
+.Home ol {
+    color: #8C8C8C;
+    padding-left: 0;
+    line-height: 1.8;
+    list-style: none;
+    text-align: justify;
+}
+
+.Home li {
+    margin-bottom: 4px;
+    text-align: justify;
+}
+
+.Home strong {
+    color: #D9D9D9;
+}
+
+.Home code {
+    background-color: #1A1A1A;
+    color: #D9D9D9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+.Home table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.Home th {
+    text-align: left;
+    padding: 10px 14px;
+    background-color: #1A1A1A;
+    color: #D9D9D9;
+    font-weight: 600;
+    border-bottom: 1px solid #262626;
+}
+
+.Home td {
+    padding: 10px 14px;
+    color: #8C8C8C;
+    border-bottom: 1px solid #1A1A1A;
+    text-align: left;
+}
+
+.Home tr:last-child td {
+    border-bottom: none;
+}
+
+.Home ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: justify;
 }
