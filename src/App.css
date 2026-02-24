@@ -24,11 +24,6 @@ a {
     color: inherit;
 }
 
-a:focus {
-    outline: 2px dashed #D9D9D9;
-    outline-offset: 4px;
-}
-
 .App {
     text-align: center;
     min-height: 100vh;
@@ -93,8 +88,7 @@ a:focus {
     transition: all 0.3s ease;
 }
 
-.Link:hover,
-.Link:focus {
+.Link:hover{
     color: #D9D9D9; 
     background-color: #0D0D0D;
     border-color: #D9D9D9;
@@ -161,8 +155,7 @@ a:focus {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.ExamCard:hover,
-.ExamCard:focus {
+.ExamCard:hover{
     transform: translateY(-5px);
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
     outline: 2px dashed #D9D9D9;
@@ -257,8 +250,7 @@ a:focus {
     box-shadow: 0px 4px 12px #262626;
 }
 
-.FilterButton:hover,
-.FilterButton:focus {
+.FilterButton:hover {
     color: #D9D9D9;
     background-color: #262626; 
     border-color: #D9D9D9;
@@ -297,12 +289,6 @@ a:focus {
     transition: all 0.3s ease;
     text-align: center;
 }
-
-.SortDropdown:focus {
-    border-color: #D9D9D9;
-    outline: 2px dashed #D9D9D9;
-    outline-offset: 4px;
-} 
 
 .FilterModal {
     width: 100%;
@@ -355,12 +341,6 @@ a:focus {
     width: 100%;
 }
 
-.ModalBody input:focus,
-.ModalBody select:focus {
-    border-color: #D9D9D9;
-    outline: 2px dashed #D9D9D9;
-    outline-offset: 4px;
-}
 
 .ModalBody input::placeholder {
     color: #8C8C8C;
